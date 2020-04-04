@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM练习</title>
+
+    <script type="text/javascript">
+
+        //全选
+        function checkAll() {
+            //获取复选框对象
+            var hobbys = document.getElementsByName("hobby");
+            for (var i = 0; i < hobbys.length; i++) {
+                hobbys[i].checked=true;
+            }
+        }
+
+        //全不选
+        function checkNotAll() {
+            //获取复选框对象
+            var hobbys = document.getElementsByName("hobby");
+            for (var i = 0; i < hobbys.length; i++) {
+                hobbys[i].checked=false;
+            }
+        }
+
+        //反选
+        function checkReverse() {
+            //获取复选框对象
+            var hobbys = document.getElementsByName("hobby");
+            for (var i = 0; i < hobbys.length; i++) {
+                hobbys[i].checked= !hobbys[i].checked;
+            }
+        }
+
+    </script>
+
+
+</head>
+<body>
+技能：
+<input type="checkbox" name="hobby" value="C++" checked="checked">C++
+<input type="checkbox" name="hobby" value="JAVA">JAVA
+<input type="checkbox" name="hobby" value="JS">JS <br>
+<button onclick="checkAll()">全选</button>
+<button onclick="checkNotAll()">全选</button>
+<button onclick="checkReverse()">全选</button>
+</body>
+</html>

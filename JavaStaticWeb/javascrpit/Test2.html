@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+
+    <!--<script type="text/javascript" src="demo1.js"></script>-->
+</head>
+<body>
+
+<script type="text/javascript">
+
+    var arr = [1,8,3,5];
+    function getMax(arr) {
+        var indexOfMax=0;
+        for(var i=0;i<arr.length;i++){
+            if(arr[i]>arr[indexOfMax])
+                indexOfMax=i;
+        }
+        return arr[indexOfMax];
+    }
+    var max=getMax(arr);
+    document.write(max);
+</script>
+
+
+
+
+
+</body>
+</html>

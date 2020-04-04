@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本校验</title>
+
+    <script type="text/javascript">
+        /*
+        * 需求：当用户点击了较验按钮，要获取输出框中的内容。然后验证其是否合法。<br/>
+        * 验证的规则是：必须由字母，数字。下划线组成。并且长度是5到12位。
+        * */
+        function onblurFun() {
+            //获取输入框对象
+            var usernameObj = document.getElementById("username");
+            //获取输入框的内容
+            var username = usernameObj.value;
+            //获取span标签对象
+            var spanObj = document.getElementById("reg");
+            //设置正则表达式
+            var usernameReg=/^\w{5,12}$/;
+
+            if(usernameReg.test(username)){
+                // spanObj.innerHTML="用户名正确";
+                spanObj.innerHTML="<img width=\"15\"  height=\"15\" src=\"right.png\">";
+            }else {
+                // spanObj.innerHTML="用户名错误";
+                spanObj.innerHTML="<img width=\"15\"  height=\"15\" src=\"wrong.png\">";
+            }
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+用户名：<input onblur="onblurFun()" id="username" value="shuang">
+    <span id="reg" style="color: #802442">
+        <!--<img width="15"  height="15" src="right.png">-->
+        <!--<img width="15"  height="15" src="wrong.png">-->
+    </span>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性练习</title>
+    <script type="text/javascript" src="script/jquery-1.7.2.js"></script>
+
+    <script type="text/javascript">
+
+    $(function () {
+        //html练习
+        // alert($("div").html());
+        // $("div").html("<h1>米米</h1>");
+
+        //text()练习
+        //alert($("div").text());
+        //$("div").text("哈哈哈哈");
+
+        //val()练习
+        //alert($("#t1").val());
+        //$("#t1").val("I am fine!");
+
+        //val 方法同时设置多个表单项的选中状态：
+        $(":radio").val(["radio1"]);//设置单选框的选定状态
+        $(":checkbox").val(["checkbox1","checkbox3"]);//设置复选框的选定状态
+        $("#multiple").val(["mul2","mul3"]);//设置多选下拉列表的选定状态
+        $("#single").val(["sin1","sin3"]);//设置下拉列表的选定状态
+
+        $("#multiple,#single,:radio,:checkbox").val(["radio2","checkbox1","checkbox3","mul1","mul4","sin3"]);
+
+    });
+
+    </script>
+</head>
+<body>
+
+<div>我是div<span>我是span</span></div>
+
+<input type="text" id="t1" value="你好" name="username">
+<hr/>
+
+    单选：
+    <input name="radio" type="radio" value="radio1" />radio1
+    <input name="radio" type="radio" value="radio2" />radio2
+    <br/>
+    多选：
+    <input name="checkbox" type="checkbox" value="checkbox1" />checkbox1
+    <input name="checkbox" type="checkbox" value="checkbox2" />checkbox2
+    <input name="checkbox" type="checkbox" value="checkbox3" />checkbox3
+    <br/>
+    下拉多选：
+    <select id="multiple" multiple="multiple" size="4">
+        <option value="mul1">mul1</option>
+        <option value="mul2">mul2</option>
+        <option value="mul3">mul3</option>
+        <option value="mul4">mul4</option>
+    </select>
+    <br/>
+    下拉单选：
+    <select id="single">
+        <option value="sin1">sin1</option>
+        <option value="sin2">sin2</option>
+        <option value="sin3">sin3</option>
+    </select>
+
+</body>
+</html>

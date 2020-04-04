@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数演示</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    function add(x,y){
+        return x+y;
+    }
+
+    function show(x,y){
+        for(var a=0;a<arguments.length;a++){
+            document.write(arguments[a]);
+        }
+    }
+    show(1,5,5,9,7);//建议有几个参数就传几个参数
+    //document.write(add(2,4));
+
+</script>
+
+
+<script type="text/javascript">
+
+    /*
+    函数的细节2：
+    */
+    function getsum(){
+        return 100;
+    }
+
+    var sum=getsum();//getsum函数运行，并把结果赋给sum。
+    document.write(sum);
+    var sum=getsum;//getsum本身是一个函数名，而函数名在js中本身是一个对象。getsum就是这个对象的引用。
+    //将getsum这个引用的地址值赋给sum，这个sum也指向了这个函数的对象。
+    //相当于这个函数对象有两个名称。
+
+    document.write(sum);//打印时如果sum指的是函数对象，那么会将该函数对象的字符串表现形式打印出来。
+                        //就是打印函数代码的格式。
+
+</script>
+
+
+
+<script type="text/javascript">
+
+    /*
+    js函数的其他表现形式：
+
+    动态函数：使用的是js中的一个对象Function
+    参数列表，函数体是通过字符串动态指定的。
+
+
+    */
+    var add=new Function("x,y","var sum;sum=x+y;return sum;");
+    var he=add(4,8);
+    alert("he="+he);
+
+    function add(x,y){
+        var sum;
+        sum=x+y;
+        return sum;
+    }
+
+</script>
+
+<script type="text/javascript">
+
+
+    /*匿名函数*/
+    function add(x,y){
+        return x+y;
+    }
+
+    /*上下相等*/
+    var add=function(){
+        return x+y;
+    }
+
+
+</script>
+
+
+</body>
+</html>

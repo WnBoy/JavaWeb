@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM练习</title>
+
+    <script type="text/javascript">
+
+        //全选
+        function checkAll() {
+            //获取复选框对象
+            var inputs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].checked=true;
+            }
+        }
+
+    </script>
+
+
+</head>
+<body>
+技能：
+<input type="checkbox"  value="C++" checked="checked">C++
+<input type="checkbox"  value="JAVA">JAVA
+<input type="checkbox"  value="JS">JS <br>
+<button onclick="checkAll()">全选</button>
+</body>
+</html>

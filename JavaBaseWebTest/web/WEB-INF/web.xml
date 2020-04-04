@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!--全局参数-->
+    <context-param>
+        <param-name>address</param-name>
+        <param-value>西安</param-value>
+    </context-param>
+    <context-param>
+        <param-name>school</param-name>
+        <param-value>xupt</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>xupt.edu.servlet1.HelloServlet</servlet-class>
+        <!--初始化参数-->
+        <init-param>
+            <param-name>name</param-name>
+            <param-value>爽</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>age</param-name>
+            <param-value>25</param-value>
+        </init-param>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>HelloServlet2</servlet-name>
+        <servlet-class>xupt.edu.servlet1.HelloServlet2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet2</servlet-name>
+        <url-pattern>/hello2</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>HelloServlet3</servlet-name>
+        <servlet-class>xupt.edu.servlet1.HelloServlet3</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet3</servlet-name>
+        <url-pattern>/hello3</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ContextServlet</servlet-name>
+        <servlet-class>xupt.edu.servlet1.ContextServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ContextServlet</servlet-name>
+        <url-pattern>/cs</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ContextServlet2</servlet-name>
+        <servlet-class>xupt.edu.servlet1.ContextServlet2</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ContextServlet2</servlet-name>
+        <url-pattern>/cs2</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>HttpServletRequestAPI</servlet-name>
+        <servlet-class>xupt.edu.servlet2.HttpServletRequestAPI</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HttpServletRequestAPI</servlet-name>
+        <url-pattern>/httpServletRequestAPI</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ParameterServlet</servlet-name>
+        <servlet-class>xupt.edu.servlet2.ParameterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ParameterServlet</servlet-name>
+        <url-pattern>/parameterServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DispatcherServlet1</servlet-name>
+        <servlet-class>xupt.edu.servlet2.DispatcherServlet1</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DispatcherServlet1</servlet-name>
+        <url-pattern>/dispatcherServlet1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DispatcherServlet2</servlet-name>
+        <servlet-class>xupt.edu.servlet2.DispatcherServlet2</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DispatcherServlet2</servlet-name>
+        <url-pattern>/dispatcherServlet2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BaseTest</servlet-name>
+        <servlet-class>xupt.edu.servlet2.BaseTest</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BaseTest</servlet-name>
+        <url-pattern>/baseTest</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ResponServletTest1</servlet-name>
+        <servlet-class>xupt.edu.servlet2.ResponServletTest1</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ResponServletTest1</servlet-name>
+        <url-pattern>/responServletTest1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestJspServlet</servlet-name>
+        <servlet-class>xupt.edu.TestJSP.TestJspServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TestJspServlet</servlet-name>
+        <url-pattern>/testJspServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <!--配置监听器-->
+    <listener>
+        <listener-class>xupt.edu.listener.MyServeletContextListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>xupt.edu.file.UploadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/uploadServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DownloadServlet</servlet-name>
+        <servlet-class>xupt.edu.file.DownloadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DownloadServlet</servlet-name>
+        <url-pattern>/downloadServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>CookieServlet</servlet-name>
+        <servlet-class>xupt.edu.cookie.CookieServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CookieServlet</servlet-name>
+        <url-pattern>/cookieServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>xupt.edu.cookie.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SessionServlet</servlet-name>
+        <servlet-class>xupt.edu.session.SessionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SessionServlet</servlet-name>
+        <url-pattern>/sessionServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RegistServlet</servlet-name>
+        <servlet-class>xupt.edu.Kaptcha.RegistServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistServlet</servlet-name>
+        <url-pattern>/registServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--配置google的验证码-->
+    <servlet>
+        <servlet-name>KaptchaServlet</servlet-name>
+        <servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>KaptchaServlet</servlet-name>
+        <url-pattern>/kaptcha.jpg</url-pattern>
+    </servlet-mapping>
+    <!--filter 标签用于配置一个Filter 过滤器-->
+    <filter>
+        <!--给filter 起一个别名-->
+        <filter-name>MyFilter</filter-name>
+        <!--配置filter 的全类名-->
+        <filter-class>xupt.edu.filter.MyFilter</filter-class>
+    </filter>
+    <!--filter-mapping 配置Filter 过滤器的拦截路径-->
+    <filter-mapping>
+        <!--filter-name 表示当前的拦截路径给哪个filter 使用-->
+        <filter-name>MyFilter</filter-name>
+        <!--url-pattern 配置拦截路径
+         / 表示请求地址为：http://ip:port/工程路径/ 映射到IDEA 的web 目录
+         /admin/* 表示请求地址为：http://ip:port/工程路径/admin/*
+        -->
+        <url-pattern>/admin/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>xupt.edu.filtertest.AdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/adminServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AjaxServlet</servlet-name>
+        <servlet-class>xupt.edu.ajax.AjaxServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AjaxServlet</servlet-name>
+        <url-pattern>/ajaxServlet</url-pattern>
+    </servlet-mapping>
+
+
+
+
+</web-app>
