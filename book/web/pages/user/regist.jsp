@@ -24,7 +24,7 @@
             $("#username").blur(function () {
                 var username = this.value;
                 $.getJSON("http://localhost:8080/book/userServlet",{action:"ajaxTestUsername",username:username},function (data) {
-                    console.log(data);
+                    // console.log(data);
                     if(data.msg){
                         $("span.errorMsg").text("用户名已占用！");
                     }else {

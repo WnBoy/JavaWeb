@@ -79,12 +79,12 @@ public class JDBCUtils {
         Connection connection = threadLocal.get();
         if(connection!=null){
             try {
-                connection.commit();//提交事务
+                connection.rollback();//回滚事务
             } catch (SQLException e) {
                 e.printStackTrace();
             }finally {
                 try {
-                    connection.rollback();//回滚事务
+                    connection.close();// 关闭连接，资源资源
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
